@@ -203,20 +203,20 @@ def load(world3):
     pop = world3.addFlow("pop", detail="Total Population",
                    unit="capita", cat=POPULATION)
 
-    p1 = world3.addStock("p1", val=P1I.val)
-    p2 = world3.addStock("p2", val=P2I.val)
-    p3 = world3.addStock("p3", val=P3I.val)
-    p4 = world3.addStock("p4", val=P4I.val)
+    p1 = world3.addStock("p1", val=P1I.val, detail="Population aged from 0 to 14 years")
+    p2 = world3.addStock("p2", val=P2I.val, detail="Population aged from 15 to 44 years")
+    p3 = world3.addStock("p3", val=P3I.val, detail="Population aged from 45 to 64 years")
+    p4 = world3.addStock("p4", val=P4I.val, detail="Population older than age 65")
 
-    m1 = world3.addFlow("m1")
-    m2 = world3.addFlow("m2")
-    m3 = world3.addFlow("m3")
-    m4 = world3.addFlow("m4")
+    m1 = world3.addFlow("m1", detail="Mortality rate in population aged from 0 to 14 years")
+    m2 = world3.addFlow("m2", detail="Mortality rate in population aged from 15 to 44 years")
+    m3 = world3.addFlow("m3", detail="Mortality rate in population aged from 45 to 64 years")
+    m4 = world3.addFlow("m4", detail="Mortality rate in population older than age 65")
 
-    d1 = world3.addFlow("d1")
-    d2 = world3.addFlow("d2")
-    d3 = world3.addFlow("d3")
-    d4 = world3.addFlow("d4")
+    d1 = world3.addFlow("d1", detail="Deaths per year in population aged from 0 to 14 years")
+    d2 = world3.addFlow("d2", detail="Deaths per year in population aged from 15 to 44 years")
+    d3 = world3.addFlow("d3", detail="Deaths per year in population aged from 45 to 64 years")
+    d4 = world3.addFlow("d4", detail="Deaths per year in population older than age 65")
 
     mat1 = world3.addFlow("mat1")
     mat2 = world3.addFlow("mat2")
